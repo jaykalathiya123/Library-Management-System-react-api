@@ -17,23 +17,26 @@ const BookDetails = () => {
     }
 
 return (
-  <div className="bg-gray-100 min-h-screen py-10">
-    <div className="max-w-xl mx-auto text-center bg-white shadow-lg rounded-lg p-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">{Book.title}</h1>
-      <div className="text-left">
-        <h4 className="text-lg text-gray-600 mb-1">
-          Author: <span className="text-blue-600">{Book.author}</span>
-        </h4>
-        <h4 className="text-lg text-gray-600 mb-1">
-          Genre: <span className="text-blue-600">{Book.genre}</span>
-        </h4>
-        <h4 className="text-lg text-gray-600 mb-1">
-          Year: <span className="text-blue-600">{Book.year}</span>
-        </h4>
-      </div>
-      <p className="text-gray-700 mt-4 text-left">{Book.description}</p>
+<div className="bg-gray-100 min-h-screen py-10">
+  <div className="max-w-xl mx-auto text-center bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-6 hover:from-blue-600 hover:to-purple-700 transition-colors duration-300">
+    <h1 className="text-3xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+      <i className="fas fa-book"></i> {Book.title}
+    </h1>
+    <div className="text-left text-white">
+      <h4 className="text-lg mb-1 flex items-center gap-2">
+        <i className="fas fa-user"></i> Author: <span className="text-blue-200 hover:text-white transition-colors duration-300">{Book.author}</span>
+      </h4>
+      <h4 className="text-lg mb-1 flex items-center gap-2">
+        <i className="fas fa-bookmark"></i> Genre: <span className="text-blue-200 hover:text-white transition-colors duration-300">{Book.genre}</span>
+      </h4>
+      <h4 className="text-lg mb-1 flex items-center gap-2">
+        <i className="fas fa-calendar"></i> Year: <span className="text-blue-200 hover:text-white transition-colors duration-300">{Book.year}</span>
+      </h4>
     </div>
+    <p className="text-white mt-4 text-left hover:text-blue-200 transition-colors duration-300">{Book.description}</p>
   </div>
+</div>
+
 );
  
 };

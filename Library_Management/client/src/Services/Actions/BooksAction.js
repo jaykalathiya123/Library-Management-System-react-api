@@ -25,8 +25,7 @@ export const AddDataPostAsync = (data) => {
       useLetters: false,
     });
 
-    axios
-      .post("http://localhost:4001/Books", data)
+    axios.post("http://localhost:4001/Books", data)
       .then((res) => {
         console.log("res", res);
 
@@ -40,8 +39,7 @@ export const AddDataPostAsync = (data) => {
 
 export const GetDataAsync = () => {
   return (dispatch) => {
-    axios
-      .get("http://localhost:4001/Books")
+    axios.get("http://localhost:4001/Books")
       .then((res) => {
         console.log("res", res);
 
@@ -55,8 +53,7 @@ export const GetDataAsync = () => {
 
 export const singledataAsync = (id) => {
   return (dispatch) => {
-    axios
-      .get(`http://localhost:4001/Books${id}`)
+    axios.get(`http://localhost:4001/Books/${id}`)
       .then((res) => {
         console.log("res", res);
         dispatch(SingleRecord(res.data));
@@ -69,8 +66,7 @@ export const singledataAsync = (id) => {
 
 export const UpdateRecordAsync = (data) => {
   return (dispatch) => {
-    axios
-      .put(`http://localhost:4001/Books/${data.id}`, data)
+    axios.put(`http://localhost:4001/Books/${data.id}`, data)
       .then((res) => {
         console.log(res);
         dispatch(GetDataAsync());

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import Booksimage from '../../assets/img/book.jpg';
+import Booksimage from '../../assets/img/back-book';
 import { DeleteAsync, GetDataAsync, SingleRecord } from '../../Services/Actions/BooksAction';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 
